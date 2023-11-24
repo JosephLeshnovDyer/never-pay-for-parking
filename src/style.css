@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  color: #333;
+}
+@keyframes moveOut {
+  from {
+  }
+  to {
+    left: 1000px;
+  }
+}
+
+.move-out {
+  transform: translateX(-70vw);
+  transition: all 1.5s ease-in;
+  transition-delay: 0.2s;
+}
