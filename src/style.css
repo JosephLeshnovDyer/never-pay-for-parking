@@ -1,17 +1,27 @@
-* {
-  box-sizing: border-box;
-  color: #333;
-}
-@keyframes moveOut {
-  from {
-  }
-  to {
-    left: 1000px;
-  }
-}
+@import "./keyframes";
 
 .move-out {
-  transform: translateX(-70vw);
-  transition: all 1.5s ease-in;
-  transition-delay: 0.2s;
+  transform: translateX(-100vw);
+  transition: all 1s ease-in;
+  transition-delay: 0.1s;
+}
+
+.fade-out {
+  position: relative;
+  opacity: 0;
+  -webkit-animation: fade-out 1s;
+  -moz-animation: fade-out 1s;
+  -o-animation: fade-out 1s;
+  -ms-animation: fade-out 1s;
+  animation: fade-out 1s;
+}
+
+.fade-in {
+  position: relative;
+  opacity: 1;
+  -webkit-animation: fade-in 1s ease-in;
+  -moz-animation: fade-in 1s ease-in;
+  -o-animation: fade-in 1s ease-in;
+  -ms-animation: fade-in 1s ease-in;
+  animation: fade-in 1s ease-in;
 }

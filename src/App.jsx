@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Center, Grid, GridItem } from "@chakra-ui/react";
+import { Center, ChakraProvider, Grid, GridItem } from "@chakra-ui/react";
 import UserFlow from "./UserFlow";
 
 const queryClient = new QueryClient({
@@ -14,18 +14,20 @@ const queryClient = new QueryClient({
 
 const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Grid>
-        <GridItem>
-          <Center>
-            <header>Never Pay For Parking</header>
-          </Center>
-        </GridItem>
-        <GridItem>
-          <UserFlow />
-        </GridItem>
-      </Grid>
-    </QueryClientProvider>
+    <ChakraProvider>
+      <QueryClientProvider client={queryClient}>
+        <Grid>
+          <GridItem>
+            <Center>
+              <header>Never Pay For Parking</header>
+            </Center>
+          </GridItem>
+          <GridItem>
+            <UserFlow />
+          </GridItem>
+        </Grid>
+      </QueryClientProvider>
+    </ChakraProvider>
   );
 };
 
